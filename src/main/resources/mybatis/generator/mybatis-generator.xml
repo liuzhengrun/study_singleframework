@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE generatorConfiguration
+        PUBLIC "-//mybatis.org//DTD MyBatis Generator Configuration 1.0//EN"
+        "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
+
+<generatorConfiguration>
+
+    <!-- 可以用于加载配置项或者配置文件，在整个配置文件中就可以使用${propertyKey}的方式来引用配置项
+    resource：配置资源加载地址，使用resource，MBG从classpath开始找，比如com/myproject/generatorConfig.properties
+    url：配置资源加载地质，使用URL的方式，比如file:///C:/myfolder/generatorConfig.properties.
+    注意，两个属性只能选址一个;
+
+    另外，如果使用了mybatis-generator-maven-plugin，那么在pom.xml中定义的properties都可以直接在generatorConfig.xml中使用
+    <properties resource="" url="" />
+   -->
+
+    <!-- 在MBG工作的时候，需要额外加载的依赖包, location属性指明加载jar/zip包的全路径
+   <classPathEntry location="/Program Files/IBM/SQLLIB/java/db2java.zip" />
+     -->
+    <!--如：数据库驱动包路径 -->
+    <!--<classPathEntry location="C:\Users\Administrator\Downloads\mysql-connector-java-5.1.40.jar"/>-->
+
+    <!--
+        context:生成一组对象的环境
+        id:必选，上下文id，用于在生成错误时提示
+        defaultModelType:指定生成对象的样式
+            1，conditional：类似hierarchical；
+            2，flat：所有内容（主键，blob）等全部生成在一个对象中；
+            3，hierarchical：主键生成一个XXKey对象(key class)，Blob等单独生成一个对象，其他简单属性在一个对象中(record class)
+        targetRuntime:
+            1，MyBatis3：默认的值，生成基于MyBatis3.x以上版本的内容，包括XXXBySample；
+            2，MyBatis3Simple：类似MyBatis3，只是不生成XXXBySample；
+        introspectedColumnImpl：类全限定名，用于扩展MBG
+    -->
+    <context id="mybatis_generator" targetRuntime="MyBatis3" defaultModelType="flat">
+
+        <!-- 自动识别数据库关键字，默认false，如果设置为true，根据SqlReservedWords中定义的关键字列表；
+        一般保留默认值，遇到数据库关键字（Java关键字），使用columnOverride覆盖
+        -->
+        <property name="autoDelimitKeywords" value="false"/>
+
+        <!-- 生成的Java文件的编码 -->
+        <property name="javaFileEncoding" value="UTF-8"/>
+
+        <!--beginningDelimiter和endingDelimiter：指明数据库的用于标记数据库对象名的符号，比如ORACLE就是双引号，MYSQL默认是`反引号；-->
+        <property name="beginningDelimiter" value="`"/>
+        <property name="endingDelimiter" value="`"/>
+
+        <!--继承、注解-->
+        <!--<plugin type="org.mybatis.generator.extension.LombokPlugin"/>-->
+        <plugin type="tk.mybatis.mapper.generator.MapperPlugin">
+            <property name="mappers" value="com.cloudrises.projectframework.common.BaseMapper"/>
+        </plugin>
+        <!--<plugin type="org.mybatis.generator.plugins.ToStringPlugin"/>-->
+        <plugin type="org.mybatis.generator.plugins.SerializablePlugin"/>
+        <!--<plugin type="org.mybatis.generator.plugins.EqualsHashCodePlugin"/>-->
+        <!--<commentGenerator type="org.mybatis.generator.extension.RemarksCommentGenerator">-->
+
+        <commentGenerator>
+            <!-- 格式化java代码 -->
+            <property name="javaFormatter" value="org.mybatis.generator.api.dom.DefaultJavaFormatter"/>
+            <!-- 格式化XML代码 -->
+            <property name="xmlFormatter" value="org.mybatis.generator.api.dom.DefaultXmlFormatter"/>
+            <!-- 是否禁止显示日期 true：是 ： false:否 -->
+            <property name="suppressDate" value="false"/>
+            <!-- 是否去除自动生成的所有注释 true：是 ： false:否 -->
+            <property name="suppressAllComments" value="true"/>
+            <!-- 是否添加字段注释 true:是 false：否 -->
+            <property name="addRemarkComments" value="false"/>
+        </commentGenerator>
+
+        <!--MySql数据库连接的信息：驱动类、连接地址、用户名、密码 -->
+        <!--<jdbcConnection driverClass="com.mysql.jdbc.Driver"-->
+        <!--connectionURL="jdbc:mysql://47.104.16.79:3306/al74_connection"-->
+        <!--userId="root" password="root">-->
+        <!--<property name="useInformationSchema" value="true"/>-->
+        <!--</jdbcConnection>-->
+
+        <jdbcConnection driverClass="com.mysql.jdbc.Driver"
+                        connectionURL="jdbc:mysql://localhost:3306/cloudrises?tinyInt1isBit=false&amp;characterEncoding=utf-8"
+                        userId="root" password="root">
+            <property name="useInformationSchema" value="true"/>
+        </jdbcConnection>
+
+        <!-- java类型处理器
+        用于处理DB中的类型到Java中的类型，默认使用JavaTypeResolverDefaultImpl；
+        注意一点，默认会先尝试使用Integer，Long，Short等来对应DECIMAL和 NUMERIC数据类型；
+        -->
+        <!-- 默认false，把jdbc decimal 和 numeric 类型解析为 Integer，为 true时把jdbc decimal 和 numeric 类型解析为java.math.BigDecimal -->
+        <javaTypeResolver>
+            <!--
+            true：使用BigDecimal对应DECIMAL和 NUMERIC数据类型
+            false：默认,
+                scale>0;length>18：使用BigDecimal;
+                scale=0;length[10,18]：使用Long；
+                scale=0;length[5,9]：使用Integer；
+                scale=0;length<5：使用Short；
+            -->
+            <property name="forceBigDecimals" value="false"/>
+        </javaTypeResolver>
+
+        <!-- targetProject:生成PO实体类的位置 -->
+        <javaModelGenerator targetPackage="com.study.model" targetProject="src/main/java">
+            <!-- enableSubPackages:是否让schema作为包的后缀 -->
+            <property name="enableSubPackages" value="true"/>
+            <!-- 从数据库返回的值被清理前后的空格 -->
+            <property name="trimStrings" value="true"/>
+            <!--<property name="rootClass" value="com.cqfae.pmo.hrm.app.dao.model.AbBaseDO"/>-->
+        </javaModelGenerator>
+        <!-- targetProject:mapper.xml映射文件生成的位置 -->
+        <sqlMapGenerator targetPackage="/mybatis/mapper" targetProject="src/main/resources">
+            <!-- enableSubPackages:是否让schema作为包的后缀 -->
+            <property name="enableSubPackages" value="true"/>
+        </sqlMapGenerator>
+
+        <!--&lt;!&ndash; targetPackage：mapper接口生成的位置 &ndash;&gt;-->
+        <javaClientGenerator targetPackage="com.study.dao" targetProject="src/main/java"
+                             type="XMLMAPPER">
+            <!-- enableSubPackages:是否让schema作为包的后缀 -->
+            <property name="enableSubPackages" value="true"/>
+        </javaClientGenerator>
+
+        <!-- 指定数据库表 -->
+        <table tableName="sys_user" enableCountByExample="false"
+               enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false"
+               selectByExampleQueryId="false">
+        </table>
+
+    </context>
+</generatorConfiguration>
