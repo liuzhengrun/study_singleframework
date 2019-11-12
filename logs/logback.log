@@ -1,84 +1,216 @@
-2019-11-12 15:25:05.842 logback [main] INFO  com.study.App - Starting App on SKY-20181113PUG with PID 4040 (D:\idea_project\studyproject\study_singleframework\target\classes started by Administrator in D:\idea_project\studyproject\study_singleframework)
-2019-11-12 15:25:05.853 logback [main] INFO  com.study.App - No active profile set, falling back to default profiles: default
-2019-11-12 15:25:06.755 logback [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.study]' package. Please check your configuration.
-2019-11-12 15:25:06.764 logback [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.study]' package. Please check your configuration.
-2019-11-12 15:25:06.816 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-11-12 15:25:06.819 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-11-12 15:25:06.857 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21ms. Found 0 repository interfaces.
-2019-11-12 15:25:07.197 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$ef9449ad] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-11-12 15:25:07.619 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8890 (http)
-2019-11-12 15:25:07.635 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8890"]
-2019-11-12 15:25:07.644 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2019-11-12 15:25:07.644 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
-2019-11-12 15:25:07.650 logback [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_172\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\software\xshell\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files\nodejs\;D:\visualvm\bin;C:\Program Files\Java\jdk1.8.0_172\bin\;C:\Program Files\erl7.1;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code\bin;.]
-2019-11-12 15:25:07.799 logback [main] INFO  o.a.c.c.C.[.[.[/projectframework] - Initializing Spring embedded WebApplicationContext
-2019-11-12 15:25:07.799 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1900 ms
-2019-11-12 15:25:07.870 logback [main] WARN  o.s.b.w.s.c.AnnotationConfigServletWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'swagger2': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'swagger2.enable' in value "${swagger2.enable}"
-2019-11-12 15:25:07.872 logback [main] INFO  o.a.catalina.core.StandardService - Stopping service [Tomcat]
-2019-11-12 15:25:07.880 logback [main] WARN  o.a.c.loader.WebappClassLoaderBase - The web application [projectframework] appears to have started a thread named [Abandoned connection cleanup thread] but has failed to stop it. This is very likely to create a memory leak. Stack trace of thread:
- java.lang.Object.wait(Native Method)
- java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:144)
- com.mysql.jdbc.AbandonedConnectionCleanupThread.run(AbandonedConnectionCleanupThread.java:43)
-2019-11-12 15:25:07.903 logback [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
-
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2019-11-12 15:25:07.912 logback [main] ERROR o.s.boot.SpringApplication - Application run failed
-org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'swagger2': Injection of autowired dependencies failed; nested exception is java.lang.IllegalArgumentException: Could not resolve placeholder 'swagger2.enable' in value "${swagger2.enable}"
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:380)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.populateBean(AbstractAutowireCapableBeanFactory.java:1395)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:592)
-	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:515)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:320)
-	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:222)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:318)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:199)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:849)
-	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:877)
-	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:549)
-	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:142)
-	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:775)
-	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:397)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:316)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1260)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1248)
-	at com.study.App.main(App.java:14)
-Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'swagger2.enable' in value "${swagger2.enable}"
-	at org.springframework.util.PropertyPlaceholderHelper.parseStringValue(PropertyPlaceholderHelper.java:172)
-	at org.springframework.util.PropertyPlaceholderHelper.replacePlaceholders(PropertyPlaceholderHelper.java:124)
-	at org.springframework.core.env.AbstractPropertyResolver.doResolvePlaceholders(AbstractPropertyResolver.java:237)
-	at org.springframework.core.env.AbstractPropertyResolver.resolveRequiredPlaceholders(AbstractPropertyResolver.java:211)
-	at org.springframework.context.support.PropertySourcesPlaceholderConfigurer.lambda$processProperties$0(PropertySourcesPlaceholderConfigurer.java:175)
-	at org.springframework.beans.factory.support.AbstractBeanFactory.resolveEmbeddedValue(AbstractBeanFactory.java:851)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1188)
-	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1167)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor$AutowiredFieldElement.inject(AutowiredAnnotationBeanPostProcessor.java:593)
-	at org.springframework.beans.factory.annotation.InjectionMetadata.inject(InjectionMetadata.java:90)
-	at org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor.postProcessProperties(AutowiredAnnotationBeanPostProcessor.java:374)
-	... 17 common frames omitted
-2019-11-12 15:26:46.372 logback [main] INFO  com.study.App - Starting App on SKY-20181113PUG with PID 11596 (D:\idea_project\studyproject\study_singleframework\target\classes started by Administrator in D:\idea_project\studyproject\study_singleframework)
-2019-11-12 15:26:46.374 logback [main] INFO  com.study.App - No active profile set, falling back to default profiles: default
-2019-11-12 15:26:47.124 logback [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.study]' package. Please check your configuration.
-2019-11-12 15:26:47.135 logback [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.study]' package. Please check your configuration.
-2019-11-12 15:26:47.169 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
-2019-11-12 15:26:47.170 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
-2019-11-12 15:26:47.199 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 18ms. Found 0 repository interfaces.
-2019-11-12 15:26:47.499 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$e244fc35] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
-2019-11-12 15:26:47.887 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8890 (http)
-2019-11-12 15:26:47.899 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8890"]
-2019-11-12 15:26:47.907 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
-2019-11-12 15:26:47.907 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
-2019-11-12 15:26:47.913 logback [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_172\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\software\xshell\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files\nodejs\;D:\visualvm\bin;C:\Program Files\Java\jdk1.8.0_172\bin\;C:\Program Files\erl7.1;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code\bin;.]
-2019-11-12 15:26:48.046 logback [main] INFO  o.a.c.c.C.[.[.[/projectframework] - Initializing Spring embedded WebApplicationContext
-2019-11-12 15:26:48.047 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1620 ms
-2019-11-12 15:26:48.854 logback [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
-2019-11-12 15:26:49.003 logback [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
-2019-11-12 15:26:49.155 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
-2019-11-12 15:26:49.156 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
-2019-11-12 15:26:49.156 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
-2019-11-12 15:26:49.162 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
-2019-11-12 15:26:49.452 logback [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
-2019-11-12 15:26:49.469 logback [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
-2019-11-12 15:26:49.497 logback [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
-2019-11-12 15:26:49.517 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8890"]
-2019-11-12 15:26:49.544 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8890 (http) with context path '/projectframework'
-2019-11-12 15:26:49.547 logback [main] INFO  com.study.App - Started App in 3.646 seconds (JVM running for 4.535)
+2019-11-12 16:21:05.196 logback [main] INFO  com.study.App - Starting App on SKY-20181113PUG with PID 5176 (D:\idea_project\studyproject\study_singleframework\target\classes started by Administrator in D:\idea_project\studyproject\study_singleframework)
+2019-11-12 16:21:05.207 logback [main] INFO  com.study.App - No active profile set, falling back to default profiles: default
+2019-11-12 16:21:06.053 logback [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.study]' package. Please check your configuration.
+2019-11-12 16:21:06.063 logback [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.study]' package. Please check your configuration.
+2019-11-12 16:21:06.099 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-12 16:21:06.102 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-12 16:21:06.135 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 21ms. Found 0 repository interfaces.
+2019-11-12 16:21:06.436 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$2208748f] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-12 16:21:06.831 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8890 (http)
+2019-11-12 16:21:06.844 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8890"]
+2019-11-12 16:21:06.853 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-11-12 16:21:06.854 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-11-12 16:21:06.859 logback [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_172\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\software\xshell\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files\nodejs\;D:\visualvm\bin;C:\Program Files\Java\jdk1.8.0_172\bin\;C:\Program Files\erl7.1;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code\bin;.]
+2019-11-12 16:21:06.995 logback [main] INFO  o.a.c.c.C.[.[.[/projectframework] - Initializing Spring embedded WebApplicationContext
+2019-11-12 16:21:06.996 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1754 ms
+2019-11-12 16:21:07.695 logback [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-11-12 16:21:07.855 logback [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-12 16:21:08.001 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-11-12 16:21:08.001 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-11-12 16:21:08.001 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-11-12 16:21:08.008 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-11-12 16:21:08.301 logback [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2019-11-12 16:21:08.318 logback [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-11-12 16:21:08.344 logback [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2019-11-12 16:21:08.363 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8890"]
+2019-11-12 16:21:08.387 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8890 (http) with context path '/projectframework'
+2019-11-12 16:21:08.390 logback [main] INFO  com.study.App - Started App in 3.626 seconds (JVM running for 4.42)
+2019-11-12 16:21:46.910 logback [http-nio-8890-exec-5] INFO  o.a.c.c.C.[.[.[/projectframework] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-12 16:21:46.911 logback [http-nio-8890-exec-5] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-11-12 16:21:46.919 logback [http-nio-8890-exec-5] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 8 ms
+2019-11-12 16:21:46.959 logback [http-nio-8890-exec-5] INFO  com.study.advice.MvcMethodLogAdvice - url=[http://192.168.0.168:8890/projectframework/test1]无请求参数
+2019-11-12 16:21:46.972 logback [http-nio-8890-exec-5] WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2019-11-12 16:21:46.972 logback [http-nio-8890-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-11-12 16:21:47.143 logback [http-nio-8890-exec-5] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-11-12 16:21:47.179 logback [http-nio-8890-exec-5] INFO  com.study.advice.LogResponseAdvice - url=[http://192.168.0.168:8890/projectframework/test1]请求返回的结果为："得到数据"
+2019-11-12 16:22:49.579 logback [main] INFO  com.study.App - Starting App on SKY-20181113PUG with PID 5388 (D:\idea_project\studyproject\study_singleframework\target\classes started by Administrator in D:\idea_project\studyproject\study_singleframework)
+2019-11-12 16:22:49.585 logback [main] INFO  com.study.App - No active profile set, falling back to default profiles: default
+2019-11-12 16:22:50.397 logback [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.study]' package. Please check your configuration.
+2019-11-12 16:22:50.407 logback [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.study]' package. Please check your configuration.
+2019-11-12 16:22:50.441 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-12 16:22:50.443 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-12 16:22:50.475 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20ms. Found 0 repository interfaces.
+2019-11-12 16:22:50.761 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$640a82f2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-12 16:22:51.141 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8890 (http)
+2019-11-12 16:22:51.154 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8890"]
+2019-11-12 16:22:51.163 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-11-12 16:22:51.164 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-11-12 16:22:51.170 logback [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_172\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\software\xshell\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files\nodejs\;D:\visualvm\bin;C:\Program Files\Java\jdk1.8.0_172\bin\;C:\Program Files\erl7.1;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code\bin;.]
+2019-11-12 16:22:51.320 logback [main] INFO  o.a.c.c.C.[.[.[/projectframework] - Initializing Spring embedded WebApplicationContext
+2019-11-12 16:22:51.320 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1701 ms
+2019-11-12 16:22:52.012 logback [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-11-12 16:22:52.159 logback [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-12 16:22:52.294 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-11-12 16:22:52.294 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-11-12 16:22:52.295 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-11-12 16:22:52.300 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-11-12 16:22:52.567 logback [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2019-11-12 16:22:52.583 logback [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-11-12 16:22:52.613 logback [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2019-11-12 16:22:52.631 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8890"]
+2019-11-12 16:22:52.658 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8890 (http) with context path '/projectframework'
+2019-11-12 16:22:52.660 logback [main] INFO  com.study.App - Started App in 3.507 seconds (JVM running for 4.281)
+2019-11-12 16:22:57.292 logback [http-nio-8890-exec-1] INFO  o.a.c.c.C.[.[.[/projectframework] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-12 16:22:57.292 logback [http-nio-8890-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-11-12 16:22:57.304 logback [http-nio-8890-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 12 ms
+2019-11-12 16:22:57.337 logback [http-nio-8890-exec-1] INFO  com.study.advice.MvcMethodLogAdvice - url=[http://192.168.0.168:8890/projectframework/test1]无请求参数
+2019-11-12 16:22:57.346 logback [http-nio-8890-exec-1] WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2019-11-12 16:22:57.346 logback [http-nio-8890-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-11-12 16:22:57.518 logback [http-nio-8890-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-11-12 16:23:00.546 logback [http-nio-8890-exec-1] INFO  com.study.advice.LogResponseAdvice - url=[http://192.168.0.168:8890/projectframework/test1]请求返回的结果为："得到数据"
+2019-11-12 16:24:17.651 logback [main] INFO  com.study.App - Starting App on SKY-20181113PUG with PID 1160 (D:\idea_project\studyproject\study_singleframework\target\classes started by Administrator in D:\idea_project\studyproject\study_singleframework)
+2019-11-12 16:24:17.653 logback [main] INFO  com.study.App - No active profile set, falling back to default profiles: default
+2019-11-12 16:24:18.442 logback [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.study]' package. Please check your configuration.
+2019-11-12 16:24:18.453 logback [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.study]' package. Please check your configuration.
+2019-11-12 16:24:18.487 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-12 16:24:18.489 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-12 16:24:18.519 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19ms. Found 0 repository interfaces.
+2019-11-12 16:24:18.808 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$80244be5] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-12 16:24:19.210 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8890 (http)
+2019-11-12 16:24:19.231 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8890"]
+2019-11-12 16:24:19.241 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-11-12 16:24:19.242 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-11-12 16:24:19.250 logback [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_172\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\software\xshell\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files\nodejs\;D:\visualvm\bin;C:\Program Files\Java\jdk1.8.0_172\bin\;C:\Program Files\erl7.1;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code\bin;.]
+2019-11-12 16:24:19.421 logback [main] INFO  o.a.c.c.C.[.[.[/projectframework] - Initializing Spring embedded WebApplicationContext
+2019-11-12 16:24:19.422 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1730 ms
+2019-11-12 16:24:20.092 logback [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-11-12 16:24:20.237 logback [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-12 16:24:20.375 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-11-12 16:24:20.376 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-11-12 16:24:20.376 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-11-12 16:24:20.381 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-11-12 16:24:20.657 logback [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2019-11-12 16:24:20.675 logback [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-11-12 16:24:20.704 logback [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2019-11-12 16:24:20.722 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8890"]
+2019-11-12 16:24:20.748 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8890 (http) with context path '/projectframework'
+2019-11-12 16:24:20.750 logback [main] INFO  com.study.App - Started App in 3.438 seconds (JVM running for 4.213)
+2019-11-12 16:24:26.490 logback [http-nio-8890-exec-1] INFO  o.a.c.c.C.[.[.[/projectframework] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-12 16:24:26.490 logback [http-nio-8890-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-11-12 16:24:26.497 logback [http-nio-8890-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 7 ms
+2019-11-12 16:24:26.528 logback [http-nio-8890-exec-1] INFO  com.study.advice.MvcMethodLogAdvice - url=[http://192.168.0.168:8890/projectframework/test1]无请求参数
+2019-11-12 16:24:26.540 logback [http-nio-8890-exec-1] WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2019-11-12 16:24:26.540 logback [http-nio-8890-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-11-12 16:24:26.719 logback [http-nio-8890-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-11-12 16:24:29.747 logback [http-nio-8890-exec-1] INFO  com.study.advice.LogResponseAdvice - url=[http://192.168.0.168:8890/projectframework/test1]请求返回的结果为："得到数据"
+2019-11-12 16:24:38.808 logback [http-nio-8890-exec-6] INFO  com.study.advice.MvcMethodLogAdvice - url=[http://192.168.0.168:8890/projectframework/test1]无请求参数
+2019-11-12 16:24:41.814 logback [http-nio-8890-exec-6] INFO  com.study.advice.LogResponseAdvice - url=[http://192.168.0.168:8890/projectframework/test1]请求返回的结果为："得到数据"
+2019-11-12 16:27:50.789 logback [main] INFO  com.study.App - Starting App on SKY-20181113PUG with PID 7020 (D:\idea_project\studyproject\study_singleframework\target\classes started by Administrator in D:\idea_project\studyproject\study_singleframework)
+2019-11-12 16:27:50.791 logback [main] INFO  com.study.App - No active profile set, falling back to default profiles: default
+2019-11-12 16:27:51.660 logback [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.study.dao]' package. Please check your configuration.
+2019-11-12 16:27:51.769 logback [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.study]' package. Please check your configuration.
+2019-11-12 16:27:51.781 logback [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.study]' package. Please check your configuration.
+2019-11-12 16:27:51.822 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-12 16:27:51.823 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-12 16:27:51.855 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 20ms. Found 0 repository interfaces.
+2019-11-12 16:27:52.102 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'asyncConfig' of type [com.study.config.AsyncConfig$$EnhancerBySpringCGLIB$$dfa2f209] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-12 16:27:52.191 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$f5503200] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-12 16:27:52.571 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8890 (http)
+2019-11-12 16:27:52.583 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8890"]
+2019-11-12 16:27:52.591 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-11-12 16:27:52.591 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-11-12 16:27:52.597 logback [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_172\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\software\xshell\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files\nodejs\;D:\visualvm\bin;C:\Program Files\Java\jdk1.8.0_172\bin\;C:\Program Files\erl7.1;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code\bin;.]
+2019-11-12 16:27:52.724 logback [main] INFO  o.a.c.c.C.[.[.[/projectframework] - Initializing Spring embedded WebApplicationContext
+2019-11-12 16:27:52.725 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1892 ms
+2019-11-12 16:27:53.411 logback [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-11-12 16:27:53.570 logback [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-12 16:27:53.731 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-11-12 16:27:53.732 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-11-12 16:27:53.732 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-11-12 16:27:53.737 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-11-12 16:27:54.001 logback [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2019-11-12 16:27:54.052 logback [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2019-11-12 16:27:54.067 logback [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-11-12 16:27:54.094 logback [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2019-11-12 16:27:54.134 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8890"]
+2019-11-12 16:27:54.159 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8890 (http) with context path '/projectframework'
+2019-11-12 16:27:54.162 logback [main] INFO  com.study.App - Started App in 3.68 seconds (JVM running for 4.475)
+2019-11-12 16:28:00.720 logback [http-nio-8890-exec-1] INFO  o.a.c.c.C.[.[.[/projectframework] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-12 16:28:00.720 logback [http-nio-8890-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-11-12 16:28:00.729 logback [http-nio-8890-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 9 ms
+2019-11-12 16:28:00.766 logback [http-nio-8890-exec-1] INFO  com.study.advice.MvcMethodLogAdvice - url=[http://192.168.0.168:8890/projectframework/test1]无请求参数
+2019-11-12 16:28:00.774 logback [http-nio-8890-exec-1] WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2019-11-12 16:28:00.774 logback [http-nio-8890-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-11-12 16:28:00.939 logback [http-nio-8890-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-11-12 16:28:00.946 logback [http-nio-8890-exec-1] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService
+2019-11-12 16:28:00.971 logback [http-nio-8890-exec-1] INFO  com.study.advice.LogResponseAdvice - url=[http://192.168.0.168:8890/projectframework/test1]请求返回的结果为："得到数据"
+2019-11-12 16:28:27.836 logback [main] INFO  com.study.App - Starting App on SKY-20181113PUG with PID 5244 (D:\idea_project\studyproject\study_singleframework\target\classes started by Administrator in D:\idea_project\studyproject\study_singleframework)
+2019-11-12 16:28:27.839 logback [main] INFO  com.study.App - No active profile set, falling back to default profiles: default
+2019-11-12 16:28:28.504 logback [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.study.dao]' package. Please check your configuration.
+2019-11-12 16:28:28.611 logback [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.study]' package. Please check your configuration.
+2019-11-12 16:28:28.621 logback [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.study]' package. Please check your configuration.
+2019-11-12 16:28:28.657 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-12 16:28:28.659 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-12 16:28:28.688 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19ms. Found 0 repository interfaces.
+2019-11-12 16:28:28.920 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'asyncConfig' of type [com.study.config.AsyncConfig$$EnhancerBySpringCGLIB$$30222a95] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-12 16:28:29.000 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$45cf6a8c] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-12 16:28:29.379 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8890 (http)
+2019-11-12 16:28:29.391 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8890"]
+2019-11-12 16:28:29.400 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-11-12 16:28:29.400 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-11-12 16:28:29.406 logback [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_172\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\software\xshell\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files\nodejs\;D:\visualvm\bin;C:\Program Files\Java\jdk1.8.0_172\bin\;C:\Program Files\erl7.1;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code\bin;.]
+2019-11-12 16:28:29.541 logback [main] INFO  o.a.c.c.C.[.[.[/projectframework] - Initializing Spring embedded WebApplicationContext
+2019-11-12 16:28:29.541 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1663 ms
+2019-11-12 16:28:30.271 logback [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-11-12 16:28:30.448 logback [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-12 16:28:30.601 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-11-12 16:28:30.602 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-11-12 16:28:30.602 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-11-12 16:28:30.608 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-11-12 16:28:30.865 logback [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2019-11-12 16:28:30.916 logback [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2019-11-12 16:28:30.933 logback [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-11-12 16:28:30.964 logback [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2019-11-12 16:28:30.990 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8890"]
+2019-11-12 16:28:31.018 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8890 (http) with context path '/projectframework'
+2019-11-12 16:28:31.021 logback [main] INFO  com.study.App - Started App in 3.587 seconds (JVM running for 4.382)
+2019-11-12 16:28:35.115 logback [http-nio-8890-exec-1] INFO  o.a.c.c.C.[.[.[/projectframework] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2019-11-12 16:28:35.115 logback [http-nio-8890-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2019-11-12 16:28:35.127 logback [http-nio-8890-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 11 ms
+2019-11-12 16:28:35.163 logback [http-nio-8890-exec-1] INFO  com.study.advice.MvcMethodLogAdvice - url=[http://192.168.0.168:8890/projectframework/test1]无请求参数
+2019-11-12 16:28:35.172 logback [http-nio-8890-exec-1] WARN  com.zaxxer.hikari.HikariConfig - HikariPool-1 - idleTimeout is close to or more than maxLifetime, disabling it.
+2019-11-12 16:28:35.172 logback [http-nio-8890-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2019-11-12 16:28:35.332 logback [http-nio-8890-exec-1] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2019-11-12 16:28:35.339 logback [http-nio-8890-exec-1] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService
+2019-11-12 16:28:35.363 logback [http-nio-8890-exec-1] INFO  com.study.advice.LogResponseAdvice - url=[http://192.168.0.168:8890/projectframework/test1]请求返回的结果为："得到数据"
+2019-11-12 16:30:07.545 logback [main] INFO  com.study.App - Starting App on SKY-20181113PUG with PID 11464 (D:\idea_project\studyproject\study_singleframework\target\classes started by Administrator in D:\idea_project\studyproject\study_singleframework)
+2019-11-12 16:30:07.548 logback [main] INFO  com.study.App - No active profile set, falling back to default profiles: default
+2019-11-12 16:30:08.220 logback [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.study.dao]' package. Please check your configuration.
+2019-11-12 16:30:08.332 logback [main] WARN  t.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.study]' package. Please check your configuration.
+2019-11-12 16:30:08.342 logback [main] WARN  o.m.s.mapper.ClassPathMapperScanner - No MyBatis mapper was found in '[com.study]' package. Please check your configuration.
+2019-11-12 16:30:08.377 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2019-11-12 16:30:08.379 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2019-11-12 16:30:08.409 logback [main] INFO  o.s.d.r.c.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 19ms. Found 0 repository interfaces.
+2019-11-12 16:30:08.646 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'asyncConfig' of type [com.study.config.AsyncConfig$$EnhancerBySpringCGLIB$$3c5f61b2] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-12 16:30:08.744 logback [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration$$EnhancerBySpringCGLIB$$520ca1a9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2019-11-12 16:30:09.140 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8890 (http)
+2019-11-12 16:30:09.152 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8890"]
+2019-11-12 16:30:09.161 logback [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2019-11-12 16:30:09.161 logback [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.16]
+2019-11-12 16:30:09.168 logback [main] INFO  o.a.c.core.AprLifecycleListener - The APR based Apache Tomcat Native library which allows optimal performance in production environments was not found on the java.library.path: [C:\Program Files\Java\jdk1.8.0_172\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;D:\software\xshell\;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Git\cmd;C:\Program Files\MySQL\MySQL Server 5.7\bin;C:\Program Files\nodejs\;D:\visualvm\bin;C:\Program Files\Java\jdk1.8.0_172\bin\;C:\Program Files\erl7.1;C:\Users\Administrator\AppData\Roaming\npm;C:\Users\Administrator\AppData\Local\Programs\Microsoft VS Code\bin;.]
+2019-11-12 16:30:09.325 logback [main] INFO  o.a.c.c.C.[.[.[/projectframework] - Initializing Spring embedded WebApplicationContext
+2019-11-12 16:30:09.325 logback [main] INFO  o.s.web.context.ContextLoader - Root WebApplicationContext: initialization completed in 1728 ms
+2019-11-12 16:30:10.080 logback [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [public org.springframework.http.ResponseEntity<springfox.documentation.spring.web.json.Json> springfox.documentation.swagger2.web.Swagger2Controller.getDocumentation(java.lang.String,javax.servlet.http.HttpServletRequest)]
+2019-11-12 16:30:10.242 logback [main] INFO  o.s.s.c.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-12 16:30:10.400 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.util.MsUtil CLASS_CACHE cache.
+2019-11-12 16:30:10.400 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.genid.GenIdUtil CACHE cache.
+2019-11-12 16:30:10.400 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear tk.mybatis.mapper.version.VersionUtil CACHE cache.
+2019-11-12 16:30:10.406 logback [main] INFO  t.m.m.a.MapperCacheDisabler - Clear EntityHelper entityTableMap cache.
+2019-11-12 16:30:10.672 logback [main] INFO  o.s.s.c.ThreadPoolTaskScheduler - Initializing ExecutorService 'taskScheduler'
+2019-11-12 16:30:10.720 logback [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Context refreshed
+2019-11-12 16:30:10.736 logback [main] INFO  s.d.s.w.p.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2019-11-12 16:30:10.765 logback [main] INFO  s.d.s.w.s.ApiListingReferenceScanner - Scanning for api listing references
+2019-11-12 16:30:10.787 logback [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8890"]
+2019-11-12 16:30:10.814 logback [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8890 (http) with context path '/projectframework'
+2019-11-12 16:30:10.816 logback [main] INFO  com.study.App - Started App in 3.725 seconds (JVM running for 4.536)
+2019-11-12 16:30:20.002 logback [singleframework_timer_schedule-1] INFO  com.study.timer.TestTimer - 定时任务，10秒运行一次
